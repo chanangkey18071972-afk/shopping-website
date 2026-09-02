@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MotorZone - Motorcycle Shop</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo">🏍️ MotorZone</div>
+
+            <div class="nav-links">
+                <a href="#" id="homeLink">Home</a>
+                <a href="#" id="cartLink"> 🛒 Cart (<span id="cartCount">0</span>) </a>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search motorcycle parts..." />
+            </div>
+        </nav>
+
+        <!-- Home Section -->
+        <section id="homeSection" class="section">
+            <div class="hero">
+                <h1>MotorZone</h1>
+                <p>Everything you need for your motorcycle</p>
+            </div>
+
+            <div class="controls">
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="Helmet">Helmet</option>
+                    <option value="Exhaust">Exhaust</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Lights">Lights</option>
+                </select>
+
+                <select id="sortSelect">
+                    <option value="default">Sort Products</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                    <option value="name">Name: A-Z</option>
+                </select>
+            </div>
+
+            <div id="productList" class="product-grid"></div>
+        </section>
+
+        <section id="cartSection" class="section cart-section hidden">
+            <h2>Shopping Cart 🛒</h2>
+
+            <div id="cartList"></div>
+
+            <div class="cart-summary">
+                <h3>Total: RM <span id="cartTotal">0.00</span></h3>
+                <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+            </div>
+        </section>
+
+        <div id="toast" class="toast">Product added to cart!</div>
+
+        <script src="motor.js"></script>
+    </body>
+</html>
